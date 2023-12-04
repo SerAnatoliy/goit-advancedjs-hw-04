@@ -1,10 +1,10 @@
 import { fetchImages } from "./API_script";
-import { toast } from "./API_script";
 import SimpleLightBox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import { PER_PAGE } from "./API_script";
+import { toast } from "./izitoast";
 
-export function createGallery(
+function createGallery(
     render,
     {
         initialPage,
@@ -83,7 +83,7 @@ export function createGallery(
     }
 }
 
-export function createGAlleryMarkup(list) {
+function createGAlleryMarkup(list) {
     return list.map(createGalleryMarkup).join('');
 }
 
